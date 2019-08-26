@@ -7,8 +7,7 @@ import "./App.css";
 export default class App extends React.Component {
   state = {
     total: null,
-    next: null,
-    operation: null,
+    operations: null,
   };
 
   handleClick = buttonName => {
@@ -18,7 +17,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="component-app">
-        <Display value={this.state.next || this.state.total || "0"} />
+        <Display total={this.state.total || "0"} operations={this.state.operations || "0"} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
